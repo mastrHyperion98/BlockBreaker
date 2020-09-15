@@ -16,6 +16,7 @@ public class Paddle : MonoBehaviour
         
         // Every single frame we want to find the current position
         float mousePositionX = Input.mousePosition.x / Screen.width * screenWidth;
+        mousePositionX = Mathf.Clamp(mousePositionX, 0, screenWidth);
         Vector2 paddlePos = new Vector2(mousePositionX, transform.position.y);
         transform.position = paddlePos;
 
