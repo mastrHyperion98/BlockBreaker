@@ -6,6 +6,7 @@ public class Paddle : MonoBehaviour
 {
     // Start is called before the first frame update
     private const float screenWidth = 16f;
+    private const float minUnit = 1f;
     void Start()
     {
     }
@@ -16,7 +17,7 @@ public class Paddle : MonoBehaviour
         
         // Every single frame we want to find the current position
         float mousePositionX = Input.mousePosition.x / Screen.width * screenWidth;
-        mousePositionX = Mathf.Clamp(mousePositionX, 0, screenWidth);
+        mousePositionX = Mathf.Clamp(mousePositionX, minUnit, screenWidth-minUnit);
         Vector2 paddlePos = new Vector2(mousePositionX, transform.position.y);
         transform.position = paddlePos;
 
