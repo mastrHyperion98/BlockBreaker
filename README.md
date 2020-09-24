@@ -7,7 +7,7 @@ The objective of the game is to destroy all the blocks in a level without losing
 
 # Releases
 
-All releases will be posted on the GitHub Repository and will include executables for Windows, Mac and Linux. All beta and alpha versions of the software will be labelled as such. 
+All releases will be posted on the GitHub Repository and will include executables for Windows.
 
 # Gameplay Mechanics
 * Player launches a ball
