@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
     private float initialYPosition;
     private bool isLaunched = false;
     private Rigidbody2D rigidBody;
-    [SerializeField] private float forceScalar;
+    [SerializeField] private float velocity_speed;
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
@@ -30,7 +30,7 @@ public class Ball : MonoBehaviour
         if (!isLaunched && Input.GetKey(KeyCode.Space))
         {
             isLaunched = true;
-            rigidBody.AddForce(Vector2.up * forceScalar);
+            rigidBody.velocity = Vector2.up * velocity_speed;
         }
     }
 }
