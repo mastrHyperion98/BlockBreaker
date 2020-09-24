@@ -8,11 +8,14 @@ public class Block : MonoBehaviour
     private float NumberOfHits = 3;
     private int current_sprite_index = 0;
     private SpriteRenderer _spriteRenderer;
-
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip BreakBlock;
+    [SerializeField] private AudioClip ImpactBlock;
     [SerializeField] private Sprite[] array = new Sprite[3];
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -30,14 +33,17 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("HIT DETECTED");
-             if (other.transform.tag.CompareTo("Ball") == 0)
-             {
-                 NumberOfHits--;
-                 if(NumberOfHits == 0)
-                     Destroy(this.gameObject);
-                 ChangeSprite();
-             }
+        if (other.transform.tag.CompareTo("Ball") != 0) return;
+        NumberOfHits--;
+        if (NumberOfHits == 0)
+        { 
+            _audioSource.PlayOneShot(BreakBlock);
+            Destroy(this.gameObject);
+                    
+        }else
+            _audioSource.PlayOneShot(ImpactBlock);
+
+        ChangeSprite();
     }
 
     private void ChangeSprite()

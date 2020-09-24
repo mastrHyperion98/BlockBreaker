@@ -10,6 +10,7 @@ public class Paddle : MonoBehaviour
     [SerializeField] private float paddle_speed = 1.0f;
     void Start()
     {
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
