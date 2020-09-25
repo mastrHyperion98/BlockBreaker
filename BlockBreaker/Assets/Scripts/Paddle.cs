@@ -6,7 +6,7 @@ public class Paddle : MonoBehaviour
 {
     // Start is called before the first frame update
     private const float screenWidth = 16f;
-    private const float minUnit = 1f;
+    private const float minUnit = 1.0f;
     [SerializeField] private float paddle_speed = 1.0f;
     private Vector2 paddlePos;
     void Start()
