@@ -11,8 +11,11 @@ public class Ball : MonoBehaviour
     private bool isLaunched = false;
     private Rigidbody2D rigidBody;
     [SerializeField] private float velocity_speed;
+    [SerializeField] AudioClip Impact;
+    private AudioSource _audioSource;
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         initialYPosition = transform.position.y;
         transform.position = new Vector2(paddle.transform.position.x, initialYPosition);
@@ -32,5 +35,11 @@ public class Ball : MonoBehaviour
             isLaunched = true;
             rigidBody.velocity = Vector2.up * velocity_speed;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.transform.tag.CompareTo("Block") == 0)
+            _audioSource.PlayOneShot(Impact);
     }
 }

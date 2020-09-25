@@ -6,11 +6,11 @@ public class Paddle : MonoBehaviour
 {
     // Start is called before the first frame update
     private float screenWidth;
-    private const float minUnit = 1.0f;
-    [SerializeField] private float paddle_speed = 1.0f;
+    private float minUnit;
     private Vector2 paddlePos;
     void Start()
     {
+        minUnit = gameObject.GetComponent<SpriteRenderer>().bounds.size.x/2.0f;
         screenWidth = Camera.main.ViewportToWorldPoint(new Vector3(1,0,0)).x;
         Cursor.visible = false;
         paddlePos = transform.position;
