@@ -35,6 +35,8 @@ public class Ball : MonoBehaviour
             isLaunched = true;
             rigidBody.velocity = Vector2.up * velocity_speed;
         }
+        
+        rigidBody.velocity = velocity_speed * (rigidBody.velocity.normalized);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

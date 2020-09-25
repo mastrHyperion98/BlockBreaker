@@ -43,10 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c3cd21477f74642a634eb67c1f7e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iniChance: 20
-  birthLimit: 4
-  deathLimit: 2
-  numR: 1
-  tmpSize: {x: 28, y: 10, z: 0}
-  topMap: {fileID: 0}
-  topTile: {fileID: 11400000, guid: b9b5741cdcdcf3743bf9a43f6d10103e, type: 2}
+  r: 2
+  aliveThreshold: 5
+  deathThreshold: 2
+  initialOdds: 21
+  block: {fileID: 5775999588164955013, guid: ca81a846fc8ed0a498844d16569a4c57, type: 3}

@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  velocity_speed: 30
+  velocity_speed: 18
   Impact: {fileID: 8300000, guid: 73f0458f2f45fb34491cf911fc23aac9, type: 3}
 --- !u!82 &3701364030098946441
 AudioSource:

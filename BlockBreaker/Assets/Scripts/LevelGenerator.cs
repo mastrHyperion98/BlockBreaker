@@ -18,11 +18,11 @@ public class LevelGenerator : MonoBehaviour
     [Range(1,10)]
     public int r;
     [Range(1,10)]
-    public float aliveThreshold;
+    public int aliveThreshold;
     [Range(1,10)]
-    public float deathThreshold;
+    public int deathThreshold;
     [Range(1, 100)]
-    public float initialOdds;
+    public int initialOdds;
     private int[,] map;
     [SerializeField] private GameObject block;
     private GameObject emptyHolder;
