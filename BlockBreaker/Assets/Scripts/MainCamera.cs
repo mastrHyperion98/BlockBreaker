@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MainCamera : MonoBehaviour
 {
-    private UnityEngine.Camera camera;
+    private Camera camera;
     // Use this for initialization
-    void Start () 
+    private void Awake()
     {
         // set the desired aspect ratio (the values in this example are
         // hard-coded for 16:9, but you could make them into public
@@ -20,7 +20,7 @@ public class MainCamera : MonoBehaviour
         float scaleheight = windowaspect / targetaspect;
 
         // obtain camera component so we can modify its viewport
-        camera = GetComponent<UnityEngine.Camera>();
+        camera = GetComponent<Camera>();
 
         // if scaled height is less than current height, add letterbox
         if (scaleheight < 1.0f)
@@ -48,8 +48,6 @@ public class MainCamera : MonoBehaviour
             camera.rect = rect;
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         
