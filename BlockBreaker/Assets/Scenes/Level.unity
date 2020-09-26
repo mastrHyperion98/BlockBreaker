@@ -711,46 +711,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4781051136820143265, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
-        type: 3}
-      propertyPath: topMap
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781051136820143265, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
-        type: 3}
-      propertyPath: block
-      value: 
-      objectReference: {fileID: 5775999588164955013, guid: ca81a846fc8ed0a498844d16569a4c57,
-        type: 3}
-    - target: {fileID: 4781051136820143265, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
-        type: 3}
-      propertyPath: r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781051136820143265, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
-        type: 3}
-      propertyPath: aliveThreshold
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781051136820143265, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
-        type: 3}
-      propertyPath: deathThreshold
-      value: 2.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781051136820143265, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
-        type: 3}
-      propertyPath: initialOdds
-      value: 25.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4781051136820143294, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
         type: 3}
       propertyPath: m_Name
       value: LevelGenerator
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781051136820143294, guid: 8cfd1b9c77528d348ab147e6ad133d6a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cfd1b9c77528d348ab147e6ad133d6a, type: 3}
